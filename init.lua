@@ -18,7 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  colorscheme = "ayu",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -80,5 +80,7 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    require('leap').add_default_mappings()
+    vim.cmd("highlight Cursor gui=reverse guifg=NONE guibg=NONE")
   end,
 }
